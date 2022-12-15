@@ -32,13 +32,6 @@ def test_create_account(testing_client):
 
 
 def test_update(testing_client):
-    response = testing_client.put('/accounts/1',json={'name': 'updated test account', 'currency': '€'})
+    response = testing_client.put('/accounts/1',json={'name': 'New name', 'currency': '€'})
     assert response.status_code == 200
 
-"""
-def test_get_particular_account(testing_client):
-
-    response = testing_client.get(
-        '/accounts/1')
-    assert response.name == "Test Account"
-""
