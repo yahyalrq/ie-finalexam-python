@@ -29,4 +29,7 @@ def test_create_account(testing_client):
     response = testing_client.post('/accounts', json={'name': 'John Doe', 'currency': '€'})
     assert response.status_code == 200
 
-
+def test_get_particular_account_name(testing_client):
+    account=testing_client
+    
+    assert account.name=='Test Account'
