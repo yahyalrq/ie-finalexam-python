@@ -1,6 +1,8 @@
 name: Final CICD
 
 on:
+  schedule:
+  - cron: ‘* 23 * * * ’
   push:
     branches: [ "dev" ]
   pull_request:
